@@ -13,12 +13,14 @@ var methodOverride  = require('method-override');
 var configSettings  = require('./configSettings');
 var app             = express();
 
+// DB Settings
+// -----------------------------------------------------
+// Use the top one for testing locally. Comment it out when deploying remotely.
+//  mongoose.connect(configSettings.config.CONN_STRING);
+ mongoose.connect(process.env.CUSTOMCONNSTR.CONN_STRING);
+ 
 // Express Configuration
 // -----------------------------------------------------
-// Sets the connection to MongoDB
-// if your Node service is running on the same machine as Mongo, change your connection string to localhost: mongodb://127.0.0.1:27017/test
- mongoose.connect(configSettings.config.CONN_STRING);
-// mongoose.connect("mongodb://127.0.0.1:27017/MeanMapApp");
 
 // Logging and Parsing
 app.use(express.static(__dirname + '/public'));                 // sets the static files location to public
