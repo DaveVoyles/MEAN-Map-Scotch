@@ -10,13 +10,14 @@ var port            = process.env.PORT || 3000;
 var morgan          = require('morgan');
 var bodyParser      = require('body-parser');
 var methodOverride  = require('method-override');
+var configSettings  = require('./configSettings');
 var app             = express();
 
 // Express Configuration
 // -----------------------------------------------------
 // Sets the connection to MongoDB
 // if your Node service is running on the same machine as Mongo, change your connection string to localhost: mongodb://127.0.0.1:27017/test
- mongoose.connect("mongodb://localhost/MeanMapApp");
+ mongoose.connect(configSettings.config.CONN_STRING);
 // mongoose.connect("mongodb://127.0.0.1:27017/MeanMapApp");
 
 // Logging and Parsing
