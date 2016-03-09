@@ -10,7 +10,7 @@ var port            = process.env.PORT || 3000;
 var morgan          = require('morgan');
 var bodyParser      = require('body-parser');
 var methodOverride  = require('method-override');
-var configSettings  = require('./configSettings');
+// var configSettings  = require('./configSettings');
 var app             = express();
 
 // DB Settings
@@ -20,12 +20,13 @@ var app             = express();
 //  mongoose.connect(process.env.CUSTOMCONNSTR.CONN_STRING);
 //  mongoose.connect(process.env.CONN_STRING);
 
-if (process.env.APPSETTING_STORAGE_CONN_STRING){
-    mongoose.connect(process.env.APPSETTING_STORAGE_CONN_STRING ); 
-} else {
-    mongoose.connect(configSettings.config.CONN_STRING);
-}
+// if (process.env.APPSETTING_STORAGE_CONN_STRING){
+//     mongoose.connect(process.env.APPSETTING_STORAGE_CONN_STRING ); 
+// } else {
+//     mongoose.connect(configSettings.config.CONN_STRING);
+// }
 
+     mongoose.connect(process.env.APPSETTING_STORAGE_CONN_STRING ); 
  
 // Express Configuration
 // -----------------------------------------------------
