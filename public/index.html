@@ -57,32 +57,26 @@
                             <label for="username">Username <span class="badge">All fields required</span></label>
                             <input type="text" class="form-control" id="username" placeholder="OldandGold" ng-model="formData.username" required>
                         </div>
-                        <label class="radio control-label">Gender</label>
+                        <label class="radio control-label">Role</label>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="optionsRadios" id="radiomale" value="Male" ng-model="formData.gender">
-                                Male
+                                <input type="radio" name="optionsRadios" id="radiodev" value="Developer" ng-model="formData.role">
+                                Developer
                             </label>
                         </div>
                         <div class="radio" required>
                             <label>
-                                <input type="radio" name="optionsRadios" id="radiofemale" value="Female" ng-model="formData.gender">
-                                Female
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="optionsRadios" id="radioother" value="What's it to ya?" ng-model="formData.gender">
-                                What's it to ya?
+                                <input type="radio" name="optionsRadios" id="radioitpro" value="IT-Pro" ng-model="formData.role">
+                                IT Pro
                             </label>
                         </div>
                         <div class="form-group">
-                            <label for="age">Age</label>
-                            <input type="number" class="form-control" id="age" placeholder="72" ng-model="formData.age" required>
+                            <label for="site">Website</label>
+                            <input type="number" class="form-control" id="name" placeholder="www.Microsoft.com" ng-model="formData.site" required>
                         </div>
                         <div class="form-group">
-                            <label for="language">Favorite Language</label>
-                            <input type="text" class="form-control" id="language" placeholder="Fortran" ng-model="formData.favlang" required>
+                            <label for="language">Speciality</label>
+                            <input type="text" class="form-control" id="specialty" placeholder="Gaming" ng-model="formData.favlang" required>
                         </div>
                         <div class="form-group">
                             <label for="latitude">Latitude</label>
