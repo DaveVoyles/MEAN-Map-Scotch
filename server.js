@@ -18,7 +18,8 @@ var app             = express();
 // Use the top one for testing locally. Comment it out when deploying remotely.
 //  mongoose.connect(configSettings.config.CONN_STRING);
 //  mongoose.connect(process.env.CUSTOMCONNSTR.CONN_STRING);
- mongoose.connect(process.env.CONN_STRING);
+//  mongoose.connect(process.env.CONN_STRING);
+ mongoose.connect(process.env.APPSETTING.CONN_STRING);
  
 // Express Configuration
 // -----------------------------------------------------
