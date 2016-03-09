@@ -20,12 +20,13 @@ var app             = express();
 //  mongoose.connect(process.env.CUSTOMCONNSTR.CONN_STRING);
 //  mongoose.connect(process.env.CONN_STRING);
 
-if (process.env.APPSETTING_STORAGE_CONN_STRING){
-    mongoose.connect(process.env.APPSETTING_STORAGE_CONN_STRING ); 
-} else {
-    // mongoose.connect(configSettings.config.CONN_STRING);
-    console.log("ERROR: No DB to connect to");
-}
+mongoose.connect("mongodb://MongoLab-r:wnMwA_WRTEKuCCBJTzQFd9Xjy.cHXHI.RgL_MbO2T2c-@ds064748.mlab.com:64748/MongoLab-r");
+// if (process.env.APPSETTING_STORAGE_CONN_STRING){
+//     mongoose.connect(process.env.APPSETTING_STORAGE_CONN_STRING); 
+// } else {
+//     // mongoose.connect(configSettings.config.CONN_STRING);
+//     console.log("ERROR: No DB to connect to");
+// }
 
 //  mongoose.connect(process.env.APPSETTING_STORAGE_CONN_STRING ); 
  
