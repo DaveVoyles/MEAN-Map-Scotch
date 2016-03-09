@@ -19,7 +19,7 @@ var app             = express();
 //  mongoose.connect(configSettings.config.CONN_STRING);
 //  mongoose.connect(process.env.CUSTOMCONNSTR.CONN_STRING);
 //  mongoose.connect(process.env.CONN_STRING);
- mongoose.connect(process.env.APPSETTING.CONN_STRING);
+ mongoose.connect(process.env.APPSETTING_STORAGE_CONN_STRING );
  
 // Express Configuration
 // -----------------------------------------------------
