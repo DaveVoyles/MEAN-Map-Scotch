@@ -54,8 +54,8 @@
                     <form name ="addForm" novalidate>
                         <!-- Text Boxes and Other User Inputs. Note ng-model binds the values to Angular $scope -->
                         <div class="form-group">
-                            <label for="username">Username <span class="badge">All fields required</span></label>
-                            <input type="text" class="form-control" id="username" placeholder="OldandGold" ng-model="formData.username" required>
+                            <label for="name">Name <span class="badge">All fields required</span></label>
+                            <input type="text" class="form-control" id="name" placeholder="Bill Gates" ng-model="formData.name" required>
                         </div>
                         <label class="radio control-label">Role</label>
                         <div class="radio">
@@ -72,11 +72,15 @@
                         </div>
                         <div class="form-group">
                             <label for="site">Website</label>
-                            <input type="number" class="form-control" id="name" placeholder="www.Microsoft.com" ng-model="formData.site" required>
+                            <input type="number" class="form-control" id="website" placeholder="www.Microsoft.com" ng-model="formData.website" required>
                         </div>
                         <div class="form-group">
                             <label for="language">Speciality</label>
-                            <input type="text" class="form-control" id="specialty" placeholder="Gaming" ng-model="formData.favlang" required>
+                            <input type="text" class="form-control" id="specialty" placeholder="Gaming" ng-model="formData.specialty" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="twitter">Twitter Handle</label>
+                            <input type="text" class="form-control" id="twitter" placeholder="@BillGates" ng-model="formData.twitter" required>
                         </div>
                         <div class="form-group">
                             <label for="latitude">Latitude</label>

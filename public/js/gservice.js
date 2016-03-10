@@ -56,10 +56,10 @@ angular.module('gservice', [])
 
                 // Create popup windows for each record
                 var  contentString =
-                    '<p><b>Username</b>: ' + user.username +
-                    '<br><b>Age</b>: ' + user.age +
-                    '<br><b>Gender</b>: ' + user.gender +
-                    '<br><b>Favorite Language</b>: ' + user.favlang +
+                    '<p><b>Name</b>: ' + user.name +
+                    '<br><b>Role</b>: ' + user.role +
+                    '<br><b>Website</b>: ' + user.website +
+                    '<br><b>Twitter</b>: ' + user.twitter +
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
@@ -69,10 +69,11 @@ angular.module('gservice', [])
                         content: contentString,
                         maxWidth: 320
                     }),
-                    username: user.username,
-                    gender: user.gender,
-                    age: user.age,
-                    favlang: user.favlang
+                    name: user.name,
+                    role: user.role,
+                    website: user.website,
+                    twitter: user.twitter,
+                    specialty: user.specialty
             });
         }
         // location is now an array populated with records in Google Maps format
