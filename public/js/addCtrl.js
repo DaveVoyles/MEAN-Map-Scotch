@@ -54,8 +54,8 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
         // Grabs all of the text box fields
         var userData = {
             username: $scope.formData.username,
-            gender: $scope.formData.gender,
-            age: $scope.formData.age,
+            role: $scope.formData.role,
+            developer: $scope.formData.developer,
             favlang: $scope.formData.favlang,
             location: [$scope.formData.longitude, $scope.formData.latitude],
             htmlverified: $scope.formData.htmlverified
@@ -67,8 +67,8 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
 
                 // Once complete, clear the form (except location)
                 $scope.formData.username = "";
-                $scope.formData.gender = "";
-                $scope.formData.age = "";
+                $scope.formData.role = "";
+                $scope.formData.developer = "";
                 $scope.formData.favlang = "";
                 
                 // Refresh the map with new data
