@@ -12,7 +12,7 @@ angular.module('gservice', [])
         var locations = [];
 
         // Selected Location (initialize to center of America)
-        var selectedLat = 39.50;
+        var selectedLat  = 39.50;
         var selectedLong = -98.35;
         
         // Handling Clicks and location selection
@@ -56,23 +56,23 @@ angular.module('gservice', [])
 
                 // Create popup windows for each record
                 var  contentString =
-                    '<p><b>Name</b>: ' + user.name +
-                    '<br><b>Role</b>: ' + user.role +
+                    '<p><b>Name</b>: '     + user.name    +
+                    '<br><b>Role</b>: '    + user.role    +
                     '<br><b>Website</b>: ' + user.website +
                     '<br><b>Twitter</b>: ' + user.twitter +
                     '</p>';
 
                 // Converts each of the JSON records into Google Maps Location format (Note [Lat, Lng] format).
                 locations.push({
-                    latlon: new google.maps.LatLng(user.location[1], user.location[0]),
+                    latlon:  new google.maps.LatLng(user.location[1], user.location[0]),
                     message: new google.maps.InfoWindow({
                         content: contentString,
                         maxWidth: 320
                     }),
-                    name: user.name,
-                    role: user.role,
-                    website: user.website,
-                    twitter: user.twitter,
+                    name     : user.name,
+                    role     : user.role,
+                    website  : user.website,
+                    twitter  : user.twitter,
                     specialty: user.specialty
             });
         }
@@ -100,9 +100,9 @@ var initialize = function(latitude, longitude) {
     locations.forEach(function(n, i){
         var marker = new google.maps.Marker({
             position: n.latlon,
-            map: map,
-            title: "Big Map",
-            icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+            map     : map,
+            title   : "Big Map",
+            icon    : "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
         });
 
         // For each marker created, add a listener that checks for clicks
@@ -117,10 +117,10 @@ var initialize = function(latitude, longitude) {
     // Set initial location as a bouncing red marker
     var initialLocation = new google.maps.LatLng(latitude, longitude);
     var marker = new google.maps.Marker({
-        position: initialLocation,
+        position : initialLocation,
         animation: google.maps.Animation.BOUNCE,
-        map: map,
-        icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
+        map      : map,
+        icon     : 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
     });
     lastMarker = marker;
     
@@ -131,10 +131,10 @@ var initialize = function(latitude, longitude) {
     // Clicking on the Map moves the bouncing red marker
     google.maps.event.addListener(map, 'click', function(e){
         var marker = new google.maps.Marker({
-            position: e.latLng,
+            position : e.latLng,
             animation: google.maps.Animation.BOUNCE,
-            map: map,
-            icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
+            map      : map,
+            icon     : 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
         });
 
         // When a new spot is selected, delete the old red bouncing marker
