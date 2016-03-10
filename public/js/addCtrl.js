@@ -64,7 +64,7 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
         // Saves the user data to the db
         $http.post('/users', userData)
             .success(function (data) {
-console.log('posting!');
+             console.log('posting!');
                 // Once complete, clear the form (except location)
                 $scope.formData.name      = "";
                 $scope.formData.role      = "";
@@ -72,9 +72,17 @@ console.log('posting!');
                 $scope.formData.twitter   = "";
                 $scope.formData.specialty = "";
                 
+                console.log(
+                    $scope.formData.name,
+                    $scope.formData.role,
+                    $scope.formData.website,
+                    $scope.formData.twitter,
+                    $scope.formData.specialty
+                )
+                
                 // Refresh the map with new data
                 gservice.refresh($scope.formData.latitude, $scope.formData.longitude);
-                
+                console.log("refreshing after post");                
             })
             .error(function (data) {
                 console.log('Error: ' + data);
