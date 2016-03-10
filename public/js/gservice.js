@@ -28,8 +28,8 @@ angular.module('gservice', [])
             locations = [];
 
             // Set the selected lat and long equal to the ones provided on the refresh() call
-            selectedLat  = latitude;
-            selectedLong = longitude;
+            // selectedLat  = latitude;
+            // selectedLong = longitude;
 
             // Perform an AJAX call to get all of the records in the db.
             $http.get('/users').success(function(response){
