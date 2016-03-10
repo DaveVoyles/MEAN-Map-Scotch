@@ -29,8 +29,7 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
 
     gservice.refresh($scope.formData.latitude, $scope.formData.longitude);
 
-});
-    
+});   
     
 
     // Functions

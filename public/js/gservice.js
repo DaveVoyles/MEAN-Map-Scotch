@@ -40,6 +40,7 @@ angular.module('gservice', [])
 
                 // Then initialize the map.
                 initialize(latitude, longitude);
+                
             }).error(function (response) {
                 console.log('Error: ' + response);
             });
@@ -50,6 +51,7 @@ angular.module('gservice', [])
         // Convert a JSON of users into map points
         var convertToMapPoints = function(response){
 
+            console.log('converting to map points. Response:  ' + response)
             // Clear the locations holder
             var locations = [];
 
@@ -57,6 +59,7 @@ angular.module('gservice', [])
             for(var i= 0; i < response.length; i++) {
                 var user = response[i];
 
+                console.log('user: ' + user);
                 // Create popup windows for each record
                 var  contentString =
                     '<p><b>Name</b>: '     + user.name    +
