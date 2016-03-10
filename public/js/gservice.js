@@ -59,7 +59,7 @@ angular.module('gservice', [])
             for(var i= 0; i < response.length; i++) {
                 var user = response[i];
 
-                console.log('user: ' + user);
+                console.log('user: ' + user.name, user.role);
                 // Create popup windows for each record
                 var  contentString =
                     '<p><b>Name</b>: '     + user.name    +

@@ -64,7 +64,7 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
         // Saves the user data to the db
         $http.post('/users', userData)
             .success(function (data) {
-
+console.log('posting!');
                 // Once complete, clear the form (except location)
                 $scope.formData.name      = "";
                 $scope.formData.role      = "";
