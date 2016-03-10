@@ -33,13 +33,16 @@ angular.module('gservice', [])
 
             // Perform an AJAX call to get all of the records in the db.
             $http.get('/users').success(function(response){
+                console.log("getting users");
 
                 // Convert the results into Google Map Format
                 locations = convertToMapPoints(response);
 
                 // Then initialize the map.
                 initialize(latitude, longitude);
-            }).error(function(){});
+            }).error(function (response) {
+                console.log('Error: ' + response);
+            });
         };
 
         // Private Inner Functions
